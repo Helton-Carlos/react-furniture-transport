@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
   const [name,] = useState('React')
@@ -7,7 +6,9 @@ function App() {
   return (
     <>
       <div>
-        {name}
+        <h1 className="bg-amber-400 text-3xl font-bold underline">
+          {name}
+        </h1>
       </div>
     </>
   )
