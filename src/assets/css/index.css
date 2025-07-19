@@ -8,3 +8,8 @@
 body, html {
   @apply bg-emerald-50 text-gray-700;
 }
+
+.btn-primary {
+  @apply px-8 py-2 bg-accent rounded font-bold 
+    hover:bg-accent-content hover:text-white  hover:cursor-pointer transition-colors duration-300;
+}

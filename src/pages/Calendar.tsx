@@ -48,12 +48,14 @@ function Calendar() {
           </div>
         </div>
 
-        <button
-          type="submit"
-          className="mt-6 px-8 py-2 bg-accent rounded font-bold"
-        >
-          Próximo passo
-        </button>
+        <div className="mt-6">
+          <button
+            type="submit"
+            className="btn-primary"
+          >
+            Próximo passo
+          </button>
+        </div>
       </form>
     </div>
   );
