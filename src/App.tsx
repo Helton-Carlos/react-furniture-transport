@@ -1,28 +1,14 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Contact from './pages/Contact';
+import Calendar from './pages/Calendar';
 
-function App() {
-  const [name,] = useState('React')
-  const navigate = useNavigate();
-
+export default function App() {
   return (
-    <>
-      <div className='bg-accent flex justify-between p-4'>
-        <h1
-          className="p-4 text-3xl font-bold"
-          onClick={() => navigate('/')}
-        >
-          {name}
-        </h1>
-
-        <button
-          className="bg-primary text-white p-2 rounded"
-          onClick={() => navigate('/contact')}>
-          Contato
-        </button>
-      </div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Calendar />} />
+        <Route path="*" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
