@@ -1,18 +1,25 @@
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import { ptBR } from "react-day-picker/locale";
+import { useNavigate } from "react-router-dom";
 import "react-day-picker/style.css";
 
 import type { DateRange } from "react-day-picker";
 
 function Calendar() {
   const [range, setRange] = useState<DateRange | undefined>();
+  const navigate = useNavigate();
 
   function submitForm(e: React.FormEvent) {
     e.preventDefault();
 
-    console.log('Data inicial:', range?.from);
-    console.log('Data final:', range?.to);
+    const dataFrom = range?.from ? new Date(range.from) : null;
+    const dataTo = range?.to ? new Date(range.to) : null;
+
+    localStorage.setItem('dataFrom', dataFrom?.toISOString() || '');
+    localStorage.setItem('dataTo', dataTo?.toISOString() || '');
+
+    navigate('/tipo-envio');
   }
 
   return (
