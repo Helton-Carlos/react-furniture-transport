@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GoBack from "../components/goBack";
 
 function TypeCard() {
+  const navigate = useNavigate();
+
   const [cards] = useState([
     {
       title: 'Envio comercial',
@@ -25,16 +28,18 @@ function TypeCard() {
 
   function escolherTipo(type: string) {
     localStorage.setItem('tipoEnvioSelecionado', type);
+
+    navigate('/cep');
   }
 
   return (
     <>
       <GoBack />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 py-8">
+      <div className="mt-10 flex flex-col items-center">
         <p className="bg-accent px-4 py-2 text-3xl font-bold my-8 rounded">Tipos de Envio</p>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8 mt-4">
           {cards.map(({ title, description, image, type }, i) => (
             <div key={i} className="card bg-base-100 image-full w-96 shadow-sm">
               <figure>
