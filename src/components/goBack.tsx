@@ -11,7 +11,7 @@ export default function GoBack() {
       onClick={handleGoBack}
       type="button"
       aria-label="Voltar"
-      className="flex items-center m-8 gap-2 text-lg font-bold text-gray-700 cursor-pointer hover:text-gray-300"
+      className="flex items-center m-10 gap-2 text-lg font-bold text-gray-700 cursor-pointer hover:text-gray-300"
     >
       <FaArrowLeft />
       Voltar
