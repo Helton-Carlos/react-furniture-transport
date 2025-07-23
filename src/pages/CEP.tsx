@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import GoBack from "../components/goBack";
-import { maskCep } from "../utils/maskCEP";
+import GoBack from "@components/goBack";
+import { maskCep } from "@utils/maskCEP";
 import { FaMapMarkerAlt, FaFlagCheckered } from 'react-icons/fa';
 
 function CEP() {

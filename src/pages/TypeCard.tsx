@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import GoBack from "../components/goBack";
+import GoBack from "@components/goBack";
 
 function TypeCard() {
   const navigate = useNavigate();
